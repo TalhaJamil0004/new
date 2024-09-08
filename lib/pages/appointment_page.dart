@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:veterinary_application/pages/send_email_service.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -17,7 +18,7 @@ class _MailPageState extends State<MailPage> {
   final _formKey = GlobalKey<FormState>();
 
   final ownerNameController = TextEditingController();
-  final phoneNumberController = TextEditingController();
+  final emailController = TextEditingController();
   final petCategoryController = TextEditingController();
   final petTreatementController = TextEditingController();
   final suitableTimeController = TextEditingController();
@@ -84,8 +85,8 @@ class _MailPageState extends State<MailPage> {
                                       ),
 
                                       MyTextFormField(
-                                        controller: phoneNumberController,
-                                        hintText: 'Phone Number',
+                                        controller: emailController,
+                                        hintText: 'Email',
                                         obscureText: false,
                                       ),
                                       const SizedBox(
@@ -124,18 +125,11 @@ class _MailPageState extends State<MailPage> {
                                             setState(() {
                                               isLoading = true;
                                             });
-                                            SharedPreferences prefs =
-                                                await SharedPreferences
-                                                    .getInstance();
-                                            final email =
-                                                prefs.getString("userEmail") ??
-                                                    "";
+                                            
                                             Map<String, String> data = {
                                               "ownerName":
                                                   ownerNameController.text,
-                                              "email": email,
-                                              "phoneNumber":
-                                                  phoneNumberController.text,
+                                              "email": emailController.text,
                                               "category":
                                                   petCategoryController.text,
                                               "service":
@@ -145,8 +139,16 @@ class _MailPageState extends State<MailPage> {
                                             };
                                             await FirebaseFirestore.instance
                                                 .collection("appointments")
-                                                .doc(email)
+                                                .doc(emailController.text)
                                                 .set(data);
+                                  const subject = "Appointment Created";
+                                  final message =
+                                      "Your appointment with our Veternary Doctor is created for ${suitableTimeController.text}. Kindly reach the hospital timely.";
+                                      await SendEmailService.sendEmail(
+                                      name: ownerNameController.text,
+                                      email: emailController.text,
+                                      subject: subject,
+                                      message: message);
                                             ScaffoldMessenger.of(context)
                                                 .showSnackBar(SnackBar(
                                                     content:

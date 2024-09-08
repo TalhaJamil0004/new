@@ -115,9 +115,15 @@ class _RegisterPageState extends State<RegisterPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const SizedBox(height: 50),
-                      const Icon(Icons.person_add_rounded, size: 100)
-                          .iconColor(context.primaryColor),
-
+                      // const Icon(Icons.person_add_rounded, size: 100)
+                      //     .iconColor(context.primaryColor),
+                    Image.asset(
+                               "assets/images/signup.png",
+                                  height: 250,
+                                  width: 400,
+                                  fit: BoxFit.contain,
+                                ),
+                  
                       const SizedBox(height: 30),
                       "Creating a new account"
                           .text
@@ -156,42 +162,42 @@ class _RegisterPageState extends State<RegisterPage> {
                         onTap: signUserUp,
                         text: "Sign up",
                       ),
-                      const SizedBox(height: 20),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 25),
-                        child: Row(
-                          children: [
-                            Expanded(
-                                child: Divider(
-                              color: Colors.grey[400],
-                              thickness: 0.5,
-                            )),
-                            Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 10),
-                                child: Text(
-                                  "or continue with",
-                                  style: TextStyle(color: context.primaryColor),
-                                )),
-                            Expanded(
-                                child: Divider(
-                              color: Colors.grey[400],
-                              thickness: 0.5,
-                            )),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          MySquareTile(
-                            imagePath: "assets/images/google.png",
-                            onTap: () => AuthServices().signInWithGoogle(),
-                          ),
+                      // const SizedBox(height: 20),
+                      // Padding(
+                      //   padding: const EdgeInsets.symmetric(horizontal: 25),
+                      //   child: Row(
+                      //     children: [
+                      //       Expanded(
+                      //           child: Divider(
+                      //         color: Colors.grey[400],
+                      //         thickness: 0.5,
+                      //       )),
+                      //       Padding(
+                      //           padding:
+                      //               const EdgeInsets.symmetric(horizontal: 10),
+                      //           child: Text(
+                      //             "or continue with",
+                      //             style: TextStyle(color: context.primaryColor),
+                      //           )),
+                      //       Expanded(
+                      //           child: Divider(
+                      //         color: Colors.grey[400],
+                      //         thickness: 0.5,
+                      //       )),
+                      //     ],
+                      //   ),
+                      // ),
+                      // const SizedBox(height: 20),
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.center,
+                      //   children: [
+                      //     MySquareTile(
+                      //       imagePath: "assets/images/google.png",
+                      //       onTap: () => AuthServices().signInWithGoogle(),
+                      //     ),
                         
-                        ],
-                      ),
+                      //   ],
+                      // ),
                       const SizedBox(height: 20),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,

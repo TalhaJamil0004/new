@@ -8,7 +8,9 @@ class MyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return  MouseRegion(
+      cursor: SystemMouseCursors.click, 
+      child:GestureDetector(
       onTap: onTap,
       child: Container(
           padding: EdgeInsets.all(10),
@@ -25,6 +27,6 @@ class MyButton extends StatelessWidget {
                   fontSize: 16),
             ),
           )),
-    );
+    ));
   }
 }

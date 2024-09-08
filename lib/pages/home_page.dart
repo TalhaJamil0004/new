@@ -35,6 +35,18 @@ class _HomePageState extends State<HomePage> {
     debugPrint("Email in function: ------>>> $email");
   }
 
+  Future<void> launchWhatsApp() async {
+    const phoneNumber = '03004329932'; // Replace with your WhatsApp number
+    final url = 'https://wa.me/$phoneNumber'; // Use final for the dynamic string
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -186,12 +198,12 @@ class _HomePageState extends State<HomePage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                     Mycard(imgPath: "assets/images/doctor1.png", docName:"Dr. Faizan", docDetail:'Veterinary Surgeon\n10 years experience' ),
-                  Mycard(imgPath: "assets/images/doctor2.png", docName:"Dr. Talha", docDetail:'Veterinary Surgeon\n10 years experience' ),
-                  Mycard(imgPath: "assets/images/doctor3.png", docName:"Dr. Ahmad", docDetail:'Veterinary Surgeon\n10 years experience' ),  
-                    Mycard(imgPath: "assets/images/doctor4.png", docName:"Dr. Hafsa", docDetail:'Veterinary Surgeon\n10 years experience' ),
-                     Mycard(imgPath: "assets/images/doctor5.png", docName:"Dr. Ali", docDetail:'Veterinary Surgeon\n10 years experience' ),
-                      Mycard(imgPath: "assets/images/doctor6.png", docName:"Dr. Khuzama", docDetail:'Veterinary Surgeon\n10 years experience' ), 
+                     Mycard(imgPath: "assets/images/doctor1.png", docName:"Dr. Faizan", docDetail:'Veterinary Surgeon\n10 years experience', docLink: launchWhatsApp),
+                  Mycard(imgPath: "assets/images/doctor2.png", docName:"Dr. Talha", docDetail:'Veterinary Surgeon\n10 years experience' , docLink: launchWhatsApp),
+                  Mycard(imgPath: "assets/images/doctor3.png", docName:"Dr. Ahmad", docDetail:'Veterinary Surgeon\n10 years experience' , docLink: launchWhatsApp),  
+                    Mycard(imgPath: "assets/images/doctor4.png", docName:"Dr. Hafsa", docDetail:'Veterinary Surgeon\n10 years experience', docLink: launchWhatsApp ),
+                     Mycard(imgPath: "assets/images/doctor5.png", docName:"Dr. Ali", docDetail:'Veterinary Surgeon\n10 years experience' , docLink: launchWhatsApp),
+                      Mycard(imgPath: "assets/images/doctor6.png", docName:"Dr. Khuzama", docDetail:'Veterinary Surgeon\n10 years experience', docLink: launchWhatsApp ), 
                   ],),
                    const SizedBox(
                 height: 80,

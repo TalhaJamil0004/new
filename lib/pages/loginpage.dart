@@ -89,11 +89,18 @@ class _LoginPageState extends State<LoginPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const SizedBox(height: 50),
-                      const Icon(
-                        Icons.lock,
-                        size: 100,
-                      ).iconColor(context.primaryColor),
-
+                      // const Icon(
+                      //   Icons.lock,
+                      //   size: 100,
+                      // ).iconColor(context.primaryColor),
+                    
+                     Image.asset(
+                                  "assets/images/login.png",
+                                  height: 250,
+                                  width: 400,
+                                  fit: BoxFit.contain,
+                                ),
+    
                       const SizedBox(height: 30),
                       "Welcome to login page"
                           .text
@@ -131,61 +138,61 @@ class _LoginPageState extends State<LoginPage> {
                         text: 'Sign in',
                       ),
                       const SizedBox(height: 20),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 25),
-                        child: Row(
-                          children: [
-                            Expanded(
-                                child: Divider(
-                              color: Colors.grey[400],
-                              thickness: 0.5,
-                            )),
-                            Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 10),
-                                child: Text(
-                                  "or continue with",
-                                  style: TextStyle(color: context.primaryColor),
-                                )),
-                            Expanded(
-                                child: Divider(
-                              color: Colors.grey[400],
-                              thickness: 0.5,
-                            )),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                    Row(
-  mainAxisAlignment: MainAxisAlignment.center,
-  children: [
-    MySquareTile(
-      imagePath: "assets/images/google.png",
-      onTap: () async {
-        try {
-          await AuthServices().signInWithGoogle();
-        } catch (e) {
-          // Handle the error, for example, by showing a dialog or printing the error
-          print('Error during Google sign-in: $e');
-          // Optionally, show a dialog or a snackbar to inform the user
-          showDialog(
-            context: context,
-            builder: (context) => AlertDialog(
-              title: Text('Error'),
-              content: Text('An error occurred during Google sign-in: $e'),
-              actions: [
-                TextButton(
-                  onPressed: () => Navigator.of(context).pop(),
-                  child: Text('OK'),
-                ),
-              ],
-            ),
-          );
-        }
-      },
-    ),
-  ],
-),
+                      // Padding(
+                      //   padding: const EdgeInsets.symmetric(horizontal: 25),
+                      //   child: Row(
+                      //     children: [
+                      //       Expanded(
+                      //           child: Divider(
+                      //         color: Colors.grey[400],
+                      //         thickness: 0.5,
+                      //       )),
+                      //       Padding(
+                      //           padding:
+                      //               const EdgeInsets.symmetric(horizontal: 10),
+                      //           child: Text(
+                      //             "or continue with",
+                      //             style: TextStyle(color: context.primaryColor),
+                      //           )),
+                      //       Expanded(
+                      //           child: Divider(
+                      //         color: Colors.grey[400],
+                      //         thickness: 0.5,
+                      //       )),
+                      //     ],
+                      //   ),
+                      // ),
+                      // const SizedBox(height: 20),
+//                     Row(
+//   mainAxisAlignment: MainAxisAlignment.center,
+//   children: [
+//     MySquareTile(
+//       imagePath: "assets/images/google.png",
+//       onTap: () async {
+//         try {
+//           await AuthServices().signInWithGoogle();
+//         } catch (e) {
+//           // Handle the error, for example, by showing a dialog or printing the error
+//           print('Error during Google sign-in: $e');
+//           // Optionally, show a dialog or a snackbar to inform the user
+//           showDialog(
+//             context: context,
+//             builder: (context) => AlertDialog(
+//               title: Text('Error'),
+//               content: Text('An error occurred during Google sign-in: $e'),
+//               actions: [
+//                 TextButton(
+//                   onPressed: () => Navigator.of(context).pop(),
+//                   child: Text('OK'),
+//                 ),
+//               ],
+//             ),
+//           );
+//         }
+//       },
+//     ),
+//   ],
+// ),
 
                       const SizedBox(height: 20),
                       Row(
