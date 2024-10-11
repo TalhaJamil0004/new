@@ -1,0 +1,52 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Anti lice shampoo ",
+            "description": "Anti_lice shampoo for your pets, GOOD QUALITY .",
+            "price": 2500,
+            "detail": "An effective anti-lice shampoo for pets typically contains ingredients like pyrethrins or permethrins, which are natural or synthetic insecticides that target and kill lice on contact. These shampoos often include soothing agents like oatmeal or aloe vera to alleviate any discomfort or itching caused by lice infestation. Additionally, some formulations may incorporate essential oils like tea tree oil or neem oil, known for their insect-repelling properties. Regular use of such shampoos, following the recommended application instructions, can help pet owners effectively combat lice infestations and maintain their pet's coat health and hygiene. It's crucial to consult a veterinarian before using any new product on pets, especially if they have sensitive skin or underlying health conditions.",
+            "image": "assets/images/shampoo.png"
+        },
+        {
+            "id": 2,
+            "name": "Dog Food",
+            "description": "High Quality and Full of Calcium",
+            "price": 5000,
+            "detail": "Quality dog food should provide a balanced diet that meets the nutritional needs of your canine companion. Look for options that contain high-quality protein sources like chicken, beef, or fish, as well as essential vitamins and minerals for overall health. Additionally, consider the specific needs of your dog, such as age, size, and activity level, when selecting a formula. Opt for brands that prioritize natural ingredients and avoid fillers like corn, wheat, and soy. It's also important to consult with your veterinarian to ensure you're choosing the best food for your dog's individual needs.",
+            "image": "assets/images/dogfood.png"
+        },
+        {
+            "id": 3,
+            "name": "Cat Belt",
+            "description": "Unique and classic looking belt",
+            "price": 2000,
+            "detail": "The cat belt, a vital accessory in feline fashion, seamlessly blends style and functionality. Crafted from durable materials, it features a secure buckle mechanism ensuring a snug yet comfortable fit for cats of various sizes. Its design, often adorned with playful patterns or sleek textures, adds a touch of personality to any cat's ensemble while providing a means for identification tags or bells to enhance safety. Additionally, some cat belts boast reflective elements for increased visibility during nighttime adventures. With its practicality and aesthetic appeal, the cat belt stands as a versatile accessory for both indoor lounging and outdoor exploration, ensuring that our beloved feline companions remain both chic and secure.",
+            "image": "assets/images/catbelt.png"
+        },
+        {
+            "id": 4,
+            "name": "Bone for Dog ",
+            "description": "A good gift for your fluffy companion",
+            "price": 1000,
+            "detail": "Protein-based dog foods, particularly those formulated with bone meal, offer a rich source of essential nutrients crucial for canine health. Bone meal, derived from finely crushed animal bones, provides not only a substantial protein content but also vital minerals like calcium and phosphorus, fundamental for bone strength and overall skeletal health in dogs. This nutrient-dense formulation supports muscle development, tissue repair, and immune function, ensuring dogs maintain optimal physical condition and vitality. Moreover, bone meal serves as a natural source of glucosamine and chondroitin, aiding in joint health and mobility, especially beneficial for aging or active dogs prone to joint issues. By incorporating protein-rich bone meal into their diet, dogs can thrive with robust musculoskeletal systems, enhanced energy levels, and a better quality of life.",
+            "image": "assets/images/dogbone.webp"
+        },
+        {
+            "id": 5,
+            "name": "Dog Shampo",
+            "description": "Removes dirt and dandruff.",
+            "price": 2000,
+            "detail": "Dog shampoo is specially formulated to cater to the specific needs of a canine's coat and skin. Typically, it contains ingredients that are gentle yet effective in cleansing away dirt, oils, and odors without causing irritation. These shampoos often incorporate natural ingredients like oatmeal, aloe vera, and coconut oil to soothe sensitive skin and maintain a healthy pH balance. Additionally, some formulas may target specific concerns such as dryness, itching, or flea and tick prevention, offering a diverse range of options to suit various canine needs. Regular use of dog shampoo not only keeps the fur clean and shiny but also helps promote overall skin health, leaving your furry friend feeling fresh and comfortable.",
+            "image": "assets/images/dogshampoo.png"
+        },
+        {
+            "id": 6,
+            "name": "Cat Brush",
+            "description": "Make your cat hair silky and smooth",
+            "price": 1000,
+            "detail": "The cat brush is an essential grooming tool designed to maintain the health and appearance of your feline companion's coat. Typically featuring soft bristles or metal teeth, the brush effectively removes loose fur, dirt, and debris, preventing matting and tangles that can lead to discomfort and skin issues. Regular brushing not only keeps your cat looking sleek and well-groomed but also reduces shedding around your home. Additionally, the act of brushing promotes circulation and distributes natural oils throughout the fur, resulting in a healthier coat and skin. With various designs and styles available, including slicker brushes, grooming gloves, and shedding combs, you can choose the brush that best suits your cat's coat type and grooming needs. Regular grooming sessions with a quality cat brush not only strengthen the bond between you and your pet but also contribute to their overall well-being and happiness.",
+            "image": "assets/images/catbrush.png"
+        }
+    ]
+}
